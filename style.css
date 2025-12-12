@@ -1,0 +1,169 @@
+/* GENERAL STYLES */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6; /* Light background for the page */
+    display: flex;
+    justify-content: center;
+}
+
+/* CV CONTAINER: The main white paper-like area */
+.cv-container {
+    width: 100%;
+    max-width: 900px; /* Standard CV/A4 width feel */
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* --- SECTION 1: HEADER/PROFILE STYLES --- */
+.profile-section {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #007bff; /* Primary color separator */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.photo-container {
+    margin-right: 30px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the photo round */
+    object-fit: cover;
+    border: 4px solid #007bff;
+}
+
+.header-info h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.header-info h2 {
+    font-size: 1.2em;
+    color: #007bff;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- SECTION 2 & 3: TWO-COLUMN LAYOUT --- */
+.content-body {
+    display: flex;
+    gap: 30px; /* Space between the two columns */
+}
+
+/* Left Column (Skills/Education) */
+.left-column {
+    flex: 1; /* Takes up 1 part (e.g., 30% of the space) */
+}
+
+/* Right Column (Summary/Projects/Experience) */
+.right-column {
+    flex: 2; /* Takes up 2 parts (e.g., 70% of the space) */
+    border-left: 1px solid #ddd; /* Subtle separator line */
+    padding-left: 30px;
+}
+
+/* Common styles for all main blocks */
+.section-block {
+    margin-bottom: 30px;
+}
+
+.section-block h3 {
+    font-size: 1.3em;
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* SKILLS LIST */
+.skills-list, .soft-skills-list, .experience-tasks {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li, .soft-skills-list li {
+    background: #e9f0ff; /* Light blue background for skills */
+    color: #333;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 8px 8px 0;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* PROJECT AND EXPERIENCE STYLES */
+.project-item, .experience-item {
+    margin-bottom: 20px;
+}
+
+.project-item h4, .experience-item h4 {
+    font-size: 1.1em;
+    color: #007bff;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.project-details, .company-name {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0 0 5px 0;
+}
+
+.project-links {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.experience-tasks li {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* EDUCATION STYLES */
+.degree {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+}
+.institution, .dates {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content-body {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .photo-container {
+        margin: 0 0 15px 0;
+    }
+    .right-column {
+        border-left: none;
+        padding-left: 0;
+    }
+}
